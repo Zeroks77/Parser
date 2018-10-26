@@ -39,7 +39,7 @@ namespace MyParser
         static string Parse(string input)
         {
             var hero = Grammar.Hero.Parse(input);
-            return $"The Hero {hero.Name} playes mostly as {hero.Role}";
+            return $"The Hero {hero.Name} plays mostly as {hero.Role}";
             
         }
     }
