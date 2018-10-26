@@ -19,28 +19,42 @@ namespace MyParser
         }
        public void loadfile()
         {
-
-            List<string> list = new List<string>();
+            int i = 0;
+            List<Hero> list = new List<Hero>();
             using (StreamReader Reader = new StreamReader("..\\..\\..\\..\\test.csv"))
             {
                 string line;
                 while ((line = Reader.ReadLine()) != null)
                 {
-                    list.Add(Parse(line)); 
+                    list.Add(Parse(line));
+                   
                 }
                 foreach (var item in list)
                 {
-                    Console.WriteLine(item);
+                 
+                    Console.WriteLine(item.Name);
+                    foreach (var lane in item.Lane)
+                    {
+                        Console.WriteLine($"    Playes at {lane}");
+                    }
+                    foreach (var Role in item.Role)
+                    {
+                        Console.WriteLine($"    As {Role}");
+                    }
+                    Console.WriteLine("\n");
                 }
                 
                 Console.ReadLine();
             }
         }
-        static string Parse(string input)
+        static Hero Parse(string input)
         {
             var hero = Grammar.Hero.Parse(input);
-            return $"The Hero {hero.Name} playes mostly as {hero.Role}";
+                
             
+                return hero;
+            
+               
         }
     }
 }

@@ -6,12 +6,14 @@ namespace MyParser
 {
     class Hero
     {
-        public Hero(string name, string role)
+        public Hero(string name, List<string> role, List<string> lane)
         {
             Name = name;
             Role = role;
+            Lane = lane;
         }
         public string Name { get; set; }
-        public string Role { get; set; }
+        public List<string> Role { get; set; }
+        public List<string> Lane { get; set; }
     }
 }

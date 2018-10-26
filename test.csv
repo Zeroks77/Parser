@@ -1,10 +1,10 @@
-Weaver;Oflane
-Zeus;Midlane
-Crystal Maiden;Support
-Warlock;Support
-Faceless Void;Safelane
-Axe;Offlane
-Invoker;Midlane
-Natures Prophet;Offlane
-Bain;Support
-Phantom Assassin;Safelane
+Weaver;Oflane | Safelane;Core
+Zeus;Midlane | Offlane | Safelane;Core | Support
+Crystal Maiden;Safelane | Offlane;Support
+Warlock;Safelane | Offlane;Support
+Faceless Void;Safelane | Offlane;Core
+Axe;Offlane | Safelane;Core | Support
+Invoker;Midlane | Safelane;Core
+Natures Prophet;Offlane | Safelane;Core | Support
+Bain;Offlane | Safelane;Support
+Phantom Assassin;Midlane | Safelane;Core
