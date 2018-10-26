@@ -35,7 +35,7 @@ namespace MyParser
                     Console.WriteLine(item.Name);
                     foreach (var lane in item.Lane)
                     {
-                        Console.WriteLine($"    Playes at {lane}");
+                        Console.WriteLine($"    Plays at {lane}");
                     }
                     foreach (var Role in item.Role)
                     {
