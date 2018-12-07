@@ -15,24 +15,24 @@ namespace MyParser
             Program obj = new Program();
             Console.WriteLine("Main Role für 10 Helden");
             obj.loadfile();
-            
+
         }
-       public void loadfile()
+        public void loadfile()
         {
 
             List<string> list = new List<string>();
-            using (StreamReader Reader = new StreamReader("..\\..\\..\\..\\test.csv"))
+            using (StreamReader Reader = new StreamReader(@".\test.csv"))
             {
                 string line;
                 while ((line = Reader.ReadLine()) != null)
                 {
-                    list.Add(Parse(line)); 
+                    list.Add(Parse(line));
                 }
                 foreach (var item in list)
                 {
                     Console.WriteLine(item);
                 }
-                
+
                 Console.ReadLine();
             }
         }
@@ -40,7 +40,7 @@ namespace MyParser
         {
             var hero = Grammar.Hero.Parse(input);
             return $"The Hero {hero.Name} plays mostly as {hero.Role}";
-            
+
         }
     }
 }
