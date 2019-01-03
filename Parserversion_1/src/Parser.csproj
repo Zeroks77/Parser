@@ -6,6 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="test.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="test.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Sprache" Version="2.2.0" />
   </ItemGroup>
 
